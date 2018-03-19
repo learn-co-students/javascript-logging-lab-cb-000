@@ -4,6 +4,7 @@ const jsdom = require('jsdom')
 const path = require('path')
 
 
+//noinspection CommaExpressionJS
 describe('index', () => {
   const html = '<div></div>'
   const src = path.resolve(__dirname, '..', 'index.js')
@@ -20,7 +21,8 @@ describe('index', () => {
     })
   })
 
-  it('calls console.log()', done => {
+  //noinspection CommaExpressionJS
+it('calls console.log()', done => {
     const spy = expect.spyOn(console, 'log').andCallThrough()
 
     jsdom.env(html, [src], {
@@ -32,7 +34,8 @@ describe('index', () => {
     })
   })
 
-  it('calls console.warn()', done => {
+  //noinspection CommaExpressionJS
+it('calls console.warn()', done => {
     const spy = expect.spyOn(console, 'warn').andCallThrough()
 
     jsdom.env(html, [src], {
