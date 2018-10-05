@@ -1,3 +1,3 @@
 console.warn()
-console.log()
+console.log('Hello')
 console.error()
